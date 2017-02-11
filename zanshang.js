@@ -8,6 +8,7 @@ function ZanShang(){
   this.zsFooter = $('.zs-modal-footer');
   var that = this;
   $('.show-zs').on('click',function(){
+    //点击赞赏按钮出现弹窗
     that._show();
     that._init();
   })
@@ -33,8 +34,11 @@ ZanShang.prototype._init = function(){
   })
   this.zsbtn.each(function(el){
     $(this).on('click',function(){
-      var num = $(this).attr('data-num');
-      var type = $('.zs-type:radio:checked').val();
+      var num = $(this).attr('data-num'); //按钮的对应的数字
+      var type = $('.zs-type:radio:checked').val();//付款方式
+      //根据不同付款方式和选择对应的按钮的数字来生成对应的二维码图片，你可以自定义这个图片的路径，默认放在当前images目录中
+      //假如你需要加一个远程路径，比如我的就是
+      //http://caibaojian.com/wp-content/themes/blue/images/pay/'+type+'-'+num+'.png';
       var src = 'images/'+type+'-'+num+'.png';
       var text = $(this).html();
       var payType=$('#pay-type'), payImage = $('#pay-image'),payText = $('#pay-text');
