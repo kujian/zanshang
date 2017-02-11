@@ -2,6 +2,7 @@ body{
     font-family: Microsoft Yahei,arial;
 }
 p{margin-bottom: 10px; line-height: 1.5;}
+
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -96,6 +97,10 @@ button.close {
 .zs-modal-head .author {
     padding-top: 15px;
     display: block;
+}
+.zs-modal-head .author a{
+    color: #333;
+    text-decoration: none;
 }
 
 .zs-modal-head .author img {
